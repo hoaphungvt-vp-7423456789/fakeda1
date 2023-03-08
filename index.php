@@ -1,6 +1,6 @@
 <?php
+require_once './app/controllers/CategoryController.php';
 // helper
-
 use App\Controllers\CategoryController;
 
 require_once './public/helper/dd.php';
