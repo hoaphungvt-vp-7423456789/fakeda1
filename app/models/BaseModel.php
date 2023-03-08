@@ -4,7 +4,7 @@ namespace App\Models;
 
 use PDO;
 
-class Model
+class BaseModel
 {
     private $hostname = 'localhost';
     private $dbname = 'da1';

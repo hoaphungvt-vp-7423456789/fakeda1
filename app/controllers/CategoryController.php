@@ -15,6 +15,7 @@ class CategoryController
         //
         $model = Category::all();
         dd($model);
+        // echo 1;
     }
 
     /**

@@ -1,11 +1,15 @@
 <?php
 require_once './app/controllers/CategoryController.php';
-require_once './app/models/CategryController.php';
+require_once './app/models/BaseModel.php';
+require_once './app/models/Category.php';
 // helper
-use App\Controllers\CategoryController;
 
 require_once './public/helper/dd.php';
 require_once './public/helper/baseurl.php';
+
+use App\Controllers\CategoryController;
+
+use App\Models\BaseModel;
 
 $url = isset($_GET['url']) ? $_GET['url'] : '';
 
