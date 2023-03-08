@@ -9,7 +9,7 @@ require_once './public/helper/baseurl.php';
 
 use App\Controllers\CategoryController;
 
-use App\Models\BaseModel;
+
 
 $url = isset($_GET['url']) ? $_GET['url'] : '';
 
