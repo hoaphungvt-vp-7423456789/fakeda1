@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Category;
+
 class CategoryController
 {
     /**
@@ -11,6 +13,8 @@ class CategoryController
     public function index()
     {
         //
+        $model = Category::all();
+        dd($model);
     }
 
     /**

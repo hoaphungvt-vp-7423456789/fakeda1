@@ -6,5 +6,5 @@ use App\Models\Model;
 
 class Category extends Model
 {
-    
+    protected $table = 'category';
 }

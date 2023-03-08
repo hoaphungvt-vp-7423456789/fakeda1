@@ -1,5 +1,6 @@
 <?php
 require_once './app/controllers/CategoryController.php';
+require_once './app/models/CategryController.php';
 // helper
 use App\Controllers\CategoryController;
 
