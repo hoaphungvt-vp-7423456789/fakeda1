@@ -43,6 +43,9 @@ class BaseModel
         $stmt = $model->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetch();
+        function save(){
+
+        }
     }
     static function where($col, $con, $val){
         $model = new static;
@@ -59,5 +62,8 @@ class BaseModel
         $stmt = $this->conn->prepare($this->query);
         $stmt -> execute();
         return $stmt->fetchAll();
+    }
+    function save(){
+        
     }
 }
