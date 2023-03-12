@@ -1,30 +1,40 @@
 <?php
-require_once './app/controllers/CategoryController.php';
-require_once './app/models/BaseModel.php';
-require_once './app/models/Category.php';
+require_once './vendor/autoload.php';
+require_once './config/database.php';
 // helper
-
 require_once './public/helper/dd.php';
 require_once './public/helper/baseurl.php';
 
-use App\Controllers\CategoryController;
+use App\Controllers\BrandsController;
 
 
 
 $url = isset($_GET['url']) ? $_GET['url'] : '';
 
 switch ($url) {
-    case '':
+    case 'brands-index':
         # code...
-        $ctr = new CategoryController;
+        $ctr = new BrandsController;
         $ctr->index();
-        break;
+    case 'brands-create':
+        $ctr = new BrandsController;
+        $ctr->create();
+    case 'brands-store':
+        $ctr = new BrandsController;
+        $ctr->store();
+    case 'brands-edit':
+        $ctr = new BrandsController;
+        $ctr->edit();
+    case 'brands-update':
+        $ctr = new BrandsController;
+        $ctr->update();
+    case 'brands-destroy':
+        $ctr = new BrandsController;
+        $ctr->destroy();
     case 404:
-        # code...
         require_once './public/errors/404.php';
         break;
     default:
-        # code...
         require_once './public/errors/404.php';
         break;
 }
