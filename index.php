@@ -1,13 +1,13 @@
 <?php
-require_once './vendor/autoload.php';
-require_once './config/database.php';
-// helper
-require_once './public/helper/dd.php';
-require_once './public/helper/baseurl.php';
 
 use App\Controllers\BrandsController;
 
-
+require_once './vendor/autoload.php';
+// config
+require_once './config/database.php';
+require_once './config/baseurl.php';
+// helper
+require_once './public/helper/dd.php';
 
 $url = isset($_GET['url']) ? $_GET['url'] : '';
 
