@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Model;
 // use App\Models\BaseModel;
 use PDO;
@@ -10,11 +9,19 @@ use PDOException;
 class Brands extends Model
 {
     protected $table = 'brands';
+<<<<<<< HEAD
     function pdo_get_connection()
     {
         $dburl = "mysql:host=localhost;dbname=da1;charset=utf8";
         $username = 'root';
         $password = '';
+=======
+    public $timestamps = false;
+    protected $fillable =[
+        'name'
+    ];
+
+>>>>>>> b3b5449ba37a3548d02f134b6185ae18d49d6e43
 
         $conn = new PDO($dburl, $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

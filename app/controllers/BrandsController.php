@@ -12,8 +12,16 @@ class BrandsController extends BaseController
     public function index()
     {
         //
+<<<<<<< HEAD
        $listBrands = Brands::all();
        require_once './app/views/admin/brands/index.php';
+=======
+        $listBrands =Brands::all();
+        // echo '<pre>';
+        // var_dump ($model);
+        require "./app/views/admin/brands/index.php";
+
+>>>>>>> b3b5449ba37a3548d02f134b6185ae18d49d6e43
     }
 
     /**
@@ -22,7 +30,8 @@ class BrandsController extends BaseController
      */
     public function create()
     {
-        //
+        
+        require "./app/views/admin/brands/create.php";
     }
 
     /**
@@ -31,7 +40,10 @@ class BrandsController extends BaseController
      */
     public function store()
     {
-        //     
+       $model= new Brands;
+       $model->fill($_POST);
+       $model->save();
+       header ("location:" .BASE_URL .'/brands-index');
     }
 
     /**
@@ -49,7 +61,10 @@ class BrandsController extends BaseController
      */
     public function edit()
     {
-        //
+        $editId=isset($_GET['id'])? $_GET['id'] :NULL;
+        $brand = Brands::find($editId);
+        require "./app/views/admin/brands/edit.php";
+       // var_dump ($model);
     }
 
     /**
@@ -58,6 +73,12 @@ class BrandsController extends BaseController
      */
     public function update()
     {
+        // var_dump($_POST);
+        $updateId=$_POST['id'];
+        $model=Brands::find($updateId);
+        $model->fill($_POST);
+        $model->save();
+        header ("location:" .BASE_URL .'/brands-index');
         //
     }
 
@@ -68,5 +89,10 @@ class BrandsController extends BaseController
     public function destroy()
     {
         //
+        // var_dump ($_GET);
+        $destroyId=isset($_GET['id'])? $_GET['id'] :NULL;
+       
+        $model=Brands::destroy($destroyId);
+         header ("location:" .BASE_URL .'/brands-index');
     }
 }
