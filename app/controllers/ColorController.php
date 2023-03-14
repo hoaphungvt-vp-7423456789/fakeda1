@@ -14,18 +14,10 @@ class ColorController extends BaseController
     public function index()
     {
         //
-        // $model = Color::orderBy('id', 'DESC');
-        // câu lệnh này tương đương với select * form + tên bảng order by id desc
-        $model = Color::all();
-        // câu lệnh này tương đương với select * form + tên bảng
-        /**
-         * Theo nguyên tắc mô hình MVC thì bây giờ mình sẽ trả ra view
-         * đoạn này nếu chưa xem hết video 5 thì chỉ cần require file view mình muốn
-         * như hồi làm ở dự án mẫu tạm là được, sẽ hiểu hơn sau này tại vì cái này "KHÔNG DỄ"
-         */
-        $this->view('admin.color.index', [
-            'listColor' => $model
-        ]);
+        $listColor = Color::all();
+        // echo '<pre>';
+        // var_dump ($model);
+        require_once "./app/views/admin/color/index.php";
     }
 
     /**
@@ -34,7 +26,7 @@ class ColorController extends BaseController
      */
     public function create()
     {
-        //
+        require_once "./app/views/admin/color/create.php";
     }
 
     /**
@@ -43,7 +35,11 @@ class ColorController extends BaseController
      */
     public function store()
     {
-        //     
+        // 
+        $model = new Color;
+        $model->fill($_POST);
+        $model->save();
+        header("location:" . BASE_URL . '/color-index');
     }
 
     /**
@@ -62,6 +58,9 @@ class ColorController extends BaseController
     public function edit()
     {
         //
+        $editId = isset($_GET['id']) ? $_GET['id'] : NULL;
+        $color = Color::find($editId);
+        require_once "./app/views/admin/color/edit.php";
     }
 
     /**
@@ -71,6 +70,11 @@ class ColorController extends BaseController
     public function update()
     {
         //
+        $updateId = $_POST['id'];
+        $model = Color::find($updateId);
+        $model->fill($_POST);
+        $model->save();
+        header("location:" . BASE_URL . '/color-index');
     }
 
     /**
@@ -80,5 +84,8 @@ class ColorController extends BaseController
     public function destroy()
     {
         //
+        $destroyId = isset($_GET['id']) ? $_GET['id'] : NULL;
+        $model = Color::destroy($destroyId);
+        header("location:" . BASE_URL . '/color-index');
     }
 }
