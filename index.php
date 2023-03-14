@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\BrandsController;
+use App\Controllers\ColorController;
 
 require_once './vendor/autoload.php';
 // config
@@ -35,6 +36,31 @@ switch ($url) {
         break;
     case 'brands-destroy':
         $ctr = new BrandsController;
+        $ctr->destroy();
+        break;
+    case 'color-index':
+        # code...
+        $ctr = new ColorController;
+        $ctr->index();
+        break;
+    case 'color-create':
+        $ctr = new ColorController;
+        $ctr->create();
+        break;
+    case 'color-store':
+        $ctr = new ColorController;
+        $ctr->store();
+        break;
+    case 'color-edit':
+        $ctr = new ColorController;
+        $ctr->edit();
+        break;
+    case 'color-update':
+        $ctr = new ColorController;
+        $ctr->update();
+        break;
+    case 'color-destroy':
+        $ctr = new ColorController;
         $ctr->destroy();
         break;
     case 404:
