@@ -13,7 +13,6 @@
         <thead>
             <tr>
                 <td>id</td>
-                <td colspan="2">name</td>
                 <td>name</td>
                 <td colspan="2">Action</td>
             </tr>
