@@ -38,7 +38,6 @@ switch ($url) {
         $ctr = new BrandsController;
         $ctr->destroy();
         break;
-        // ===== color
     case 'color-index':
         # code...
         $ctr = new ColorController;
