@@ -12,16 +12,10 @@ class BrandsController extends BaseController
     public function index()
     {
         //
-<<<<<<< HEAD
-       $listBrands = Brands::all();
-       require_once './app/views/admin/brands/index.php';
-=======
         $listBrands =Brands::all();
         // echo '<pre>';
         // var_dump ($model);
         require "./app/views/admin/brands/index.php";
-
->>>>>>> b3b5449ba37a3548d02f134b6185ae18d49d6e43
     }
 
     /**
