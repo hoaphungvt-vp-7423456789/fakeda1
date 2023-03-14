@@ -13,7 +13,10 @@ class BrandsController extends BaseController
     public function index()
     {
         //
-        $model = Brands::all();
+        $model = new Brands;
+        $model->loadall_brands();
+        
+       
         dd($model);
         // echo 1;
     }
