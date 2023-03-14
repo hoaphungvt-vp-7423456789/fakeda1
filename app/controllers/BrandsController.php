@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\Brands;
@@ -13,12 +12,8 @@ class BrandsController extends BaseController
     public function index()
     {
         //
-        $model = new Brands;
-        $model->loadall_brands();
-        
-       
-        dd($model);
-        // echo 1;
+       $listBrands = Brands::all();
+       require_once './app/views/admin/brands/index.php';
     }
 
     /**

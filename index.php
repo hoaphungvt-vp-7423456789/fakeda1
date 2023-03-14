@@ -16,6 +16,7 @@ switch ($url) {
         # code...
         $ctr = new BrandsController;
         $ctr->index();
+        break;
     case 'brands-create':
         $ctr = new BrandsController;
         $ctr->create();
