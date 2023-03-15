@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2023 at 07:32 AM
+-- Generation Time: Mar 15, 2023 at 08:02 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -91,7 +91,8 @@ CREATE TABLE `color` (
 
 INSERT INTO `color` (`id`, `name`) VALUES
 (5, 'Nâu'),
-(7, 'Đen');
+(7, 'Đen'),
+(8, 'Vang');
 
 -- --------------------------------------------------------
 
@@ -214,7 +215,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `color`
 --
 ALTER TABLE `color`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `products`
