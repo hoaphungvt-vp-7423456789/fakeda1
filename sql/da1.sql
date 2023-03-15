@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2023 at 08:02 AM
+-- Generation Time: Mar 15, 2023 at 08:19 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -84,15 +84,6 @@ CREATE TABLE `color` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `color`
---
-
-INSERT INTO `color` (`id`, `name`) VALUES
-(5, 'Nâu'),
-(7, 'Đen'),
-(8, 'Vang');
 
 -- --------------------------------------------------------
 
