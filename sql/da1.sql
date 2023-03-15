@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2023 at 11:26 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Mar 15, 2023 at 07:32 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bill` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `fullname` varchar(255) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
+  `fullname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `voucher` int(10) UNSIGNED DEFAULT NULL,
   `total_price` decimal(10,0) DEFAULT NULL,
   `status` int(11) DEFAULT 0 COMMENT '0 là đang chờ xác nhận',
@@ -62,7 +62,7 @@ CREATE TABLE `bill_detail` (
 
 CREATE TABLE `brands` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -82,8 +82,16 @@ INSERT INTO `brands` (`id`, `name`) VALUES
 
 CREATE TABLE `color` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `color`
+--
+
+INSERT INTO `color` (`id`, `name`) VALUES
+(5, 'Nâu'),
+(7, 'Đen');
 
 -- --------------------------------------------------------
 
@@ -93,10 +101,10 @@ CREATE TABLE `color` (
 
 CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `description` longtext DEFAULT NULL,
-  `detail` longtext DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `detail` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `brand_id` bigint(20) UNSIGNED NOT NULL
@@ -110,7 +118,7 @@ CREATE TABLE `products` (
 
 CREATE TABLE `size` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -206,7 +214,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `color`
 --
 ALTER TABLE `color`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
