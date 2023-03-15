@@ -34,11 +34,11 @@ class ColorController extends BaseController
      */
     public function store()
     {
-        // 
+        // khi đối tượng khởi tạo bằng new thì hàm save() sẽ là hàm insert()
         $model = new Color;
         // lấy dữ liệu trên form
-        $model->fill($_POST);
-        $model->save();
+        $model->fill($_POST); //giống câu lệnh prepare
+        $model->save(); // giống câu lệnh excu
         header("location:" . BASE_URL . '/color-index');
     }
 
@@ -69,7 +69,7 @@ class ColorController extends BaseController
      */
     public function update()
     {
-        //
+        //khi đối tượng được khởi tạo bằng static func thì save() sẽ là hàm update
         $updateId = $_POST['id'];
         $model = Color::find($updateId);
         $model->fill($_POST);
@@ -86,6 +86,9 @@ class ColorController extends BaseController
         //
         $destroyId = isset($_GET['id']) ? $_GET['id'] : NULL;
         $model = Color::destroy($destroyId);
+        // $model = new Color;
+        // $model->where('id', $destroyId)->delete();
+
         header("location:" . BASE_URL . '/color-index');
     }
 }
