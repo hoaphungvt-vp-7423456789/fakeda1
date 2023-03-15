@@ -2,6 +2,7 @@
 
 use App\Controllers\BrandsController;
 use App\Controllers\ColorController;
+use App\Controllers\HomeController;
 
 require_once './vendor/autoload.php';
 // config
@@ -13,6 +14,22 @@ require_once './public/helper/dd.php';
 $url = isset($_GET['url']) ? $_GET['url'] : '';
 
 switch ($url) {
+    case '':
+        $ctr = new HomeController;
+        $ctr->homePage();
+        break;
+    case 'detail':
+        $ctr = new HomeController;
+        $ctr->detail();
+        break;
+    case 'cart':
+        $ctr = new HomeController;
+        $ctr->cart();
+        break;
+    case 'pay':
+        $ctr = new HomeController;
+        $ctr->pay();
+        break;
     case 'brands-index':
         # code...
         $ctr = new BrandsController;
