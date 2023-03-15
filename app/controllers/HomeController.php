@@ -19,4 +19,7 @@ class HomeController extends BaseController
     public function pay(){
         require_once './app/views/client/pay.php';
     }
+    public function paySuccess(){
+        require_once './app/views/client/paysuccess.php';
+    }
 }

@@ -44,7 +44,7 @@
                             <a class="nav-link disabled">Link</a>
                         </li>
                     </ul>
-                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3 text-black"><i class="fa-solid fa-cart-shopping"></i></a>
                     <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>

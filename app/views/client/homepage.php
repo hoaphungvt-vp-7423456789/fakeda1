@@ -44,7 +44,7 @@
                             <a class="nav-link disabled">Link</a>
                         </li>
                     </ul>
-                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3 text-black"><i class="fa-solid fa-cart-shopping"></i></a>
                     <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -87,11 +87,11 @@
                 </form>
                 <h2>Danh mục</h2>
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="">An item</a></li>
-                    <li class="list-group-item"><a href="">A second item</a></li>
-                    <li class="list-group-item"><a href="">A third item</a></li>
-                    <li class="list-group-item"><a href="">A fourth item</a></li>
-                    <li class="list-group-item"><a href="">And a fifth one</a></li>
+                    <li class="list-group-item"><a href="" class="text-black">An item</a></li>
+                    <li class="list-group-item"><a href="" class="text-black">A second item</a></li>
+                    <li class="list-group-item"><a href="" class="text-black">A third item</a></li>
+                    <li class="list-group-item"><a href="" class="text-black">A fourth item</a></li>
+                    <li class="list-group-item"><a href="" class="text-black">And a fifth one</a></li>
                 </ul>
             </div>
             <div class="col-9">
@@ -99,7 +99,7 @@
                     <div class="card col-4">
                         <a href="<?= BASE_URL . '/detail'?>"><img src="https://picsum.photos/200" style="height: 250px;" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?= BASE_URL . '/detail'?>">
+                            <a href="<?= BASE_URL . '/detail'?>" class="text-black text-decoration-none">
                                 <h5 class="card-title">Card title</h5>
                             </a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -108,7 +108,7 @@
                     <div class="card col-4">
                         <a href="<?= BASE_URL . '/detail'?>"><img src="https://picsum.photos/200" style="height: 250px;" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?= BASE_URL . '/detail'?>">
+                            <a href="<?= BASE_URL . '/detail'?>" class="text-black text-decoration-none">
                                 <h5 class="card-title">Card title</h5>
                             </a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -117,7 +117,7 @@
                     <div class="card col-4">
                         <a href="<?= BASE_URL . '/detail'?>"><img src="https://picsum.photos/200" style="height: 250px;" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?= BASE_URL . '/detail'?>">
+                            <a href="<?= BASE_URL . '/detail'?>" class="text-black text-decoration-none">
                                 <h5 class="card-title">Card title</h5>
                             </a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -126,7 +126,7 @@
                     <div class="card col-4">
                         <a href="<?= BASE_URL . '/detail'?>"><img src="https://picsum.photos/200" style="height: 250px;" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?= BASE_URL . '/detail'?>">
+                            <a href="<?= BASE_URL . '/detail'?>" class="text-black text-decoration-none">
                                 <h5 class="card-title">Card title</h5>
                             </a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -135,7 +135,7 @@
                     <div class="card col-4">
                         <a href="<?= BASE_URL . '/detail'?>"><img src="https://picsum.photos/200" style="height: 250px;" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?= BASE_URL . '/detail'?>">
+                            <a href="<?= BASE_URL . '/detail'?>" class="text-black text-decoration-none">
                                 <h5 class="card-title">Card title</h5>
                             </a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -144,7 +144,7 @@
                     <div class="card col-4">
                         <a href="<?= BASE_URL . '/detail'?>"><img src="https://picsum.photos/200" style="height: 250px;" class="card-img-top" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?= BASE_URL . '/detail'?>">
+                            <a href="<?= BASE_URL . '/detail'?>" class="text-black text-decoration-none">
                                 <h5 class="card-title">Card title</h5>
                             </a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

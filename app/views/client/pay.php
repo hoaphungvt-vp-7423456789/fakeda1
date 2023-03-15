@@ -12,17 +12,74 @@
 
 <body>
     <div class="container">
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">F-watch</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Link
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Link</a>
+                        </li>
+                    </ul>
+                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3 text-black"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </nav>
         <div>
             <h2>Thanh toán</h2>
-            <div class="d-flex align-items-center justify-content-between text-center">
-                <p class="ms-2">Hình ảnh</p>
-                <p style="width: 270px;">Tên sản phẩm</p>
-                <p class="" style="width: 80px;">Thuộc tính</p>
-                <p class="">Giá</p>
-                <p>Số lượng</p>
-                <p class="mb-0">Thành tiền</p>
-            </div>
-            <form action="">
+
+            <form action="<?= BASE_URL . '/paysuccess' ?>">
+                <div class="mb-3">
+                    <label for="">Fullname</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="">Address</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="">Voucher</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="d-flex align-items-center justify-content-between text-center">
+                    <p class="ms-2">Hình ảnh</p>
+                    <p style="width: 270px;">Tên sản phẩm</p>
+                    <p class="" style="width: 80px;">Thuộc tính</p>
+                    <p class="">Giá</p>
+                    <p>Số lượng</p>
+                    <p class="mb-0">Thành tiền</p>
+                </div>
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <img src="https://picsum.photos/200/300?grayscale" alt="" style="width: 100px; height: 100px;">
                     <h2 style="max-width: 400px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
@@ -49,7 +106,7 @@
                 </div>
                 <p class="d-inline-block fs-4">Tổng tiền:</p>
                 <p class="d-inline-block fs-4">đ2.000.000</p>
-                <button class="border-0 py-2 px-3 bg-danger text-white rounded d-block">Thanh toán</button>
+                <button class="border-0 py-2 px-3 bg-danger text-white rounded d-block mb-3">Thanh toán</button>
             </form>
         </div>
     </div>

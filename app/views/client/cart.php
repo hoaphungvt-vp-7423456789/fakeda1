@@ -41,10 +41,10 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Link</a>
+                            <a class="nav-link disabled text-black">Link</a>
                         </li>
                     </ul>
-                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="<?= BASE_URL . '/cart' ?>" class="fs-3 text-black"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
         </nav>
@@ -56,32 +56,36 @@
                 <p class="" style="width: 80px;">Thuộc tính</p>
                 <p class="">Giá</p>
                 <p>Số lượng</p>
-                <p class="mb-0">Thành tiền</p>
+                <p style="margin-left: 70px;">Thành tiền</p>
+                <p>Hành động</p>
             </div>
             <form action="<?= BASE_URL . '/pay' ?>">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <img src="https://picsum.photos/200/300?grayscale" alt="" style="width: 100px; height: 100px;">
-                    <h2 style="max-width: 400px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-                    <p><span>32mn</span>,<span>White</span></p>
-                    <p class=""><span class="text-black-50 text-decoration-line-through">đ300.000</span><span class="fs-5 ms-2">đ200.000</span></p>
-                    <input type="nubmer" value="1" class="border border-black-50">
-                    <p class="mb-0">đ600.000</p>
+                    <h2 style="max-width: 340px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                    <p class="width: 100px;"><span>32mn</span>,<span>White</span></p>
+                    <p class=""><span class="fs-5 ms-2">đ200.000</span></p>
+                    <input style="width: 120px; margin-right: 70px;" type="nubmer" value="1" class="border border-black-50">
+                    <p class="mb-0" style="padding-right: 56px;">đ600.000</p>
+                    <button class="bg-danger text-white p-2 border-0 rounded">Xóa</button>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <img src="https://picsum.photos/200/300?grayscale" alt="" style="width: 100px; height: 100px;">
-                    <h2 style="max-width: 400px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-                    <p><span>32mn</span>,<span>White</span></p>
-                    <p class=""><span class="text-black-50 text-decoration-line-through">đ300.000</span><span class="fs-5 ms-2">đ200.000</span></p>
-                    <input type="nubmer" value="1" class="border border-black-50">
-                    <p class="mb-0">đ600.000</p>
+                    <h2 style="max-width: 340px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                    <p class="width: 100px;"><span>32mn</span>,<span>White</span></p>
+                    <p class=""><span class="fs-5 ms-2">đ200.000</span></p>
+                    <input style="width: 120px; margin-right: 70px;" type="nubmer" value="1" class="border border-black-50">
+                    <p class="mb-0" style="padding-right: 56px;">đ600.000</p>
+                    <button class="bg-danger text-white p-2 border-0 rounded">Xóa</button>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <img src="https://picsum.photos/200/300?grayscale" alt="" style="width: 100px; height: 100px;">
-                    <h2 style="max-width: 400px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-                    <p><span>32mn</span>,<span>White</span></p>
-                    <p class=""><span class="text-black-50 text-decoration-line-through">đ300.000</span><span class="fs-5 ms-2">đ200.000</span></p>
-                    <input type="nubmer" value="1" class="border border-black-50">
-                    <p class="mb-0">đ600.000</p>
+                    <h2 style="max-width: 340px;" class="fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                    <p class="width: 100px;"><span>32mn</span>,<span>White</span></p>
+                    <p class=""><span class="fs-5 ms-2">đ200.000</span></p>
+                    <input style="width: 120px; margin-right: 70px;" type="nubmer" value="1" class="border border-black-50">
+                    <p class="mb-0" style="padding-right: 56px;">đ600.000</p>
+                    <button class="bg-danger text-white p-2 border-0 rounded">Xóa</button>
                 </div>
                 <p class="d-inline-block fs-4">Tổng tiền:</p>
                 <p class="d-inline-block fs-4">đ2.000.000</p>

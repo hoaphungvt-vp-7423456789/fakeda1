@@ -30,6 +30,10 @@ switch ($url) {
         $ctr = new HomeController;
         $ctr->pay();
         break;
+    case 'paysuccess':
+        $ctr = new HomeController;
+        $ctr->paySuccess();
+        break;
     case 'brands-index':
         # code...
         $ctr = new BrandsController;
