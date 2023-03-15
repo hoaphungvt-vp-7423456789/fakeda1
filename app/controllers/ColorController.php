@@ -13,10 +13,9 @@ class ColorController extends BaseController
      */
     public function index()
     {
-        //
+        //tươg đương với câu lệnh select * from Tên bảng giảm dần
+        // $listColor = Color::orderBy('id','desc');
         $listColor = Color::all();
-        // echo '<pre>';
-        // var_dump ($model);
         require_once "./app/views/admin/color/index.php";
     }
 
@@ -37,6 +36,7 @@ class ColorController extends BaseController
     {
         // 
         $model = new Color;
+        // lấy dữ liệu trên form
         $model->fill($_POST);
         $model->save();
         header("location:" . BASE_URL . '/color-index');
