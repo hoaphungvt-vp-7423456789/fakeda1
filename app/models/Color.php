@@ -13,4 +13,8 @@ class Color extends Model
     protected $fillable = [
         'name'
     ];
+    public function variation()
+    {
+        return $this->hasMany('App\Models\Variation');
+    }
 }

@@ -16,6 +16,7 @@ class ProductController extends BaseController
     {
         //
         $model = Products::with('brands')->get();
+
         $this->view('admin.product.index', [
             'listProduct' => $model
         ]);
@@ -47,8 +48,13 @@ class ProductController extends BaseController
         move_uploaded_file($_FILES['image']['tmp_name'], './public/uploads/products/' . $_POST['image']);
         $model->fill($_POST);
         $model->save();
+        $model1 = Brands::all();
         $status = "Thêm sản phẩm thành công";
-        $this->view('admin.product.create', ['status' => $status]);
+
+        $this->view('admin.product.create', [
+            'status' => $status,
+            'listBrands' => $model1
+        ]);
     }
 
     /**
@@ -70,16 +76,18 @@ class ProductController extends BaseController
         $editId = isset($_GET['id']) ? $_GET['id'] : NULL;
         // dd($editId);
         if (!$editId) {
-            header('location:' .  BASE_URL . '?msg=khong-du-thong-tin-de-cap-nhat');
+            header('location:' .  BASE_URL . '/404?msg=khong-du-thong-tin-de-cap-nhat');
             die;
         }
+        
         $model = Products::find($editId);
         $model1 = Brands::all();
         if (!$model) {
-            header('location:' .  BASE_URL . '?msg=khong-tim-thay-san-pham');
+            header('location:' .  BASE_URL . '/404?msg=khong-tim-thay-san-pham');
             die;
         }
         // dd($model);
+
         $this->view('admin.product.edit', [
             'product' => $model,
             'listBrands' => $model1
@@ -96,7 +104,8 @@ class ProductController extends BaseController
         // dd($_POST);
         $findId = $_POST['id'];
         $model = Products::find($findId);
-        if (isset($_FILES['image']['name'])) {
+        // dd($model->image);
+        if (!empty($_FILES['image']['name'])) {
             $_POST['image'] = uniqid() . '-' . $_FILES['image']['name'];
             move_uploaded_file($_FILES['image']['tmp_name'], './public/uploads/products/' . $_POST['image']);
             $removeImg = './public/uploads/products/' . $model->image;
@@ -112,6 +121,7 @@ class ProductController extends BaseController
         $status = "Sửa sản phẩm thành công";
         $item = Products::find($_POST['id']);
         $model1 = Brands::all();
+
         $this->view('admin.product.edit', [
             'status' => $status,
             'product' => $item,
@@ -129,12 +139,12 @@ class ProductController extends BaseController
         // dd($_POST);
         $removeId = isset($_GET['id']) ? $_GET['id'] : NULL;
         if (!$removeId) {
-            header('location:' .  BASE_URL . '?msg=khong-du-thong-tin-de-xoa');
+            header('location:' .  BASE_URL . '/404?msg=khong-du-thong-tin-de-xoa');
             die;
         }
         $model = Products::find($removeId);
         if (!$model) {
-            header('location:' .  BASE_URL . '?msg=khong-tim-thay-san-pham');
+            header('location:' .  BASE_URL . '/404?msg=khong-tim-thay-san-pham');
             die;
         }
         $removeImg = './public/uploads/products/' . $model->image;
@@ -142,6 +152,7 @@ class ProductController extends BaseController
             unlink($removeImg);
         }
         $model = Products::destroy($removeId);
+        
         header('location:' . BASE_URL . '/products-index');
     }
 }

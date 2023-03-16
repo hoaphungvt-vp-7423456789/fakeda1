@@ -20,11 +20,7 @@
         <section class="d-flex justify-content-between align-items-center border-bottom">
             <!-- logo -->
             <div class="py-2">
-                <h1>Team 6</h1>
-            </div>
-            <div>
-                <!-- Chưa biết để gì ở đây kk -->
-                <a href=""><i class="fa-solid fa-user fs-2 text-dark"></i></a>
+                <h1 class="text-warning">F-Watch</h1>
             </div>
         </section>
         <!-- body -->
@@ -32,10 +28,11 @@
             <div class="col-3">
                 <nav>
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="{{ BASE_URL . '/brands-index' }}">Quản lí thương hiệu</a></li>
-                        <li class="list-group-item"><a href="{{ BASE_URL . '/color-index' }}">Quản lí màu sắc</a></li>
-                        <li class="list-group-item"><a href="{{ BASE_URL . '/size-index' }}">Quản lí size</a></li>
-                        <li class="list-group-item"><a href="{{ BASE_URL . '/products-index' }}">Quản lí sản phẩm</a></li>
+                        <li class="list-group-item"><a class="text-black" href="{{ BASE_URL . '/brands-index' }}">Quản lí thương hiệu</a></li>
+                        <li class="list-group-item"><a class="text-black" href="{{ BASE_URL . '/color-index' }}">Quản lí màu sắc</a></li>
+                        <li class="list-group-item"><a class="text-black" href="{{ BASE_URL . '/size-index' }}">Quản lí size</a></li>
+                        <li class="list-group-item"><a class="text-black" href="{{ BASE_URL . '/products-index' }}">Quản lí sản phẩm</a></li>
+                        <li class="list-group-item"><a class="text-black" href="{{ BASE_URL . '/variation-index' }}">Quản lí biến thể</a></li>
                     </ul>
                 </nav>
             </div>

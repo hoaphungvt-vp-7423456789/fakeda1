@@ -5,6 +5,7 @@ use App\Controllers\ColorController;
 use App\Controllers\HomeController;
 use App\Controllers\SizeController;
 use App\Controllers\ProductController;
+use App\Controllers\VariationController;
 
 
 require_once './vendor/autoload.php';
@@ -135,6 +136,31 @@ switch ($url) {
         break;
     case 'products-destroy':
         $ctr = new ProductController();
+        $ctr->destroy();
+        break;
+    case 'variation-index':
+        # code...
+        $ctr = new VariationController();
+        $ctr->index();
+        break;
+    case 'variation-create':
+        $ctr = new VariationController();
+        $ctr->create();
+        break;
+    case 'variation-store':
+        $ctr = new VariationController();
+        $ctr->store();
+        break;
+    case 'variation-edit':
+        $ctr = new VariationController();
+        $ctr->edit();
+        break;
+    case 'variation-update':
+        $ctr = new VariationController();
+        $ctr->update();
+        break;
+    case 'variation-destroy':
+        $ctr = new VariationController();
         $ctr->destroy();
         break;
     case 404:

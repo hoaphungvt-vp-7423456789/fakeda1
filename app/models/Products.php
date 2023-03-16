@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+
 class Products extends Model
 {
     protected $table = 'products';
@@ -14,7 +15,12 @@ class Products extends Model
         'detail',
         'brand_id'
     ];
-    public function brands(){
+    public function brands()
+    {
         return $this->belongsTo('App\Models\Brands', 'brand_id', 'id');
+    }
+    public function variation()
+    {
+        return $this->hasMany('App\Models\Variation');
     }
 }
