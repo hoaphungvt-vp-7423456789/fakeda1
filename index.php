@@ -3,6 +3,8 @@
 use App\Controllers\BrandsController;
 use App\Controllers\ColorController;
 use App\Controllers\HomeController;
+use App\Controllers\SizeController;
+
 
 require_once './vendor/autoload.php';
 // config
@@ -82,6 +84,31 @@ switch ($url) {
         break;
     case 'color-destroy':
         $ctr = new ColorController;
+        $ctr->destroy();
+        break;
+    case 'size-index':
+        # code...
+        $ctr = new SizeController;
+        $ctr->index();
+        break;
+    case 'size-create':
+        $ctr = new SizeController;
+        $ctr->create();
+        break;
+    case 'size-store':
+        $ctr = new SizeController;
+        $ctr->store();
+        break;
+    case 'size-edit':
+        $ctr = new SizeController;
+        $ctr->edit();
+        break;
+    case 'size-update':
+        $ctr = new SizeController;
+        $ctr->update();
+        break;
+    case 'size-destroy':
+        $ctr = new SizeController;
         $ctr->destroy();
         break;
     case 404:

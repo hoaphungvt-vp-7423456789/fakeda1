@@ -20,28 +20,31 @@
             <a href="" class="text-decoration-none text-black"><iconify-icon icon="gg:profile"></iconify-icon></a>
         </div>
         <div class="box-function row">
-            <div class="list-group col">
-                <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="list-group col-2">
+                <a href="" class="list-group-item list-group-item-action active" aria-current="true">
                     Danh Mục Quản Lý
-                </button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Thương Hiệu</button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Sản Phẩm</button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Size</button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Màu Sắc</button>
+                </a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Thương Hiệu</a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Sản Phẩm</a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Size</a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Màu Sắc</a>
             </div>
-            <div class="col">
+            <div class="col-10">
+                <div class="text-center d-flex flex-row-reverse">
+                    <a href="<?= BASE_URL . '/color-create' ?> " class="btn btn-primary mb-2 px-3">Thêm Màu Sắc</a>
+                </div>
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <td>ID</td>
+                            <td>#</td>
                             <td>Màu Sắc</td>
                             <td colspan="2">Chức năng</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($listColor as $item) : ?>
+                        <?php foreach ($listColor as $key => $item) : ?>
                             <tr>
-                                <td><?= $item->id ?></td>
+                                <td><?= ++$key ?></td>
                                 <td><?= $item->name ?></td>
                                 <td class="d-flex p-3 ">
                                     <form action="<?= BASE_URL . '/color-edit' ?>" class="me-2">
@@ -59,7 +62,7 @@
                         <?php endforeach ?>
                     </tbody>
                 </table>
-                <a href="<?= BASE_URL . '/color-create' ?> " class=" d-flex justify-content-center btn btn-primary">Thêm </a>
+
             </div>
         </div>
     </div>

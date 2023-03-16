@@ -20,16 +20,16 @@
             <a href="" class="text-decoration-none text-black"><iconify-icon icon="gg:profile"></iconify-icon></a>
         </div>
         <div class="box-function row">
-            <div class="list-group col">
+            <div class="list-group col-2">
                 <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
                     Danh Mục Quản Lý
                 </button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Thương Hiệu</button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Sản Phẩm</button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Size</button>
-                <button type="button" class="list-group-item list-group-item-action">Quản Lý Màu Sắc</button>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Thương Hiệu</a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Sản Phẩm</a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Size</a>
+                <a href="" class="list-group-item list-group-item-action">Quản Lý Màu Sắc</a>
             </div>
-            <div class="col">
+            <div class="col-10">
                 <table class="table">
                     <tbody>
                         <tr>
