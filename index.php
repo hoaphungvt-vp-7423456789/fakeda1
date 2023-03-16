@@ -4,6 +4,7 @@ use App\Controllers\BrandsController;
 use App\Controllers\ColorController;
 use App\Controllers\HomeController;
 use App\Controllers\SizeController;
+use App\Controllers\ProductController;
 
 
 require_once './vendor/autoload.php';
@@ -109,6 +110,31 @@ switch ($url) {
         break;
     case 'size-destroy':
         $ctr = new SizeController;
+        $ctr->destroy();
+        break;
+    case 'products-index':
+        # code...
+        $ctr = new ProductController();
+        $ctr->index();
+        break;
+    case 'products-create':
+        $ctr = new ProductController();
+        $ctr->create();
+        break;
+    case 'products-store':
+        $ctr = new ProductController();
+        $ctr->store();
+        break;
+    case 'products-edit':
+        $ctr = new ProductController();
+        $ctr->edit();
+        break;
+    case 'products-update':
+        $ctr = new ProductController();
+        $ctr->update();
+        break;
+    case 'products-destroy':
+        $ctr = new ProductController();
         $ctr->destroy();
         break;
     case 404:
