@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 16, 2023 lúc 05:07 PM
+-- Thời gian đã tạo: Th3 17, 2023 lúc 01:47 PM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.2.0
 
@@ -120,6 +120,18 @@ INSERT INTO `products` (`id`, `name`, `image`, `description`, `detail`, `created
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `product_image`
+--
+
+CREATE TABLE `product_image` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `product_id` bigint(20) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `size`
 --
 
@@ -157,7 +169,9 @@ CREATE TABLE `variation` (
 --
 
 INSERT INTO `variation` (`id`, `color_id`, `size_id`, `product_id`, `price`, `discount`, `quantity`) VALUES
-(18, 2, 2, 7, '1', 1, 1);
+(18, 2, 2, 7, '1', 1, 1),
+(19, 1, 1, 7, '12', 12, 12),
+(20, 2, 1, 7, '1', 1, 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -195,6 +209,13 @@ ALTER TABLE `color`
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `brand_id` (`brand_id`);
+
+--
+-- Chỉ mục cho bảng `product_image`
+--
+ALTER TABLE `product_image`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Chỉ mục cho bảng `size`
@@ -255,7 +276,7 @@ ALTER TABLE `size`
 -- AUTO_INCREMENT cho bảng `variation`
 --
 ALTER TABLE `variation`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -273,6 +294,12 @@ ALTER TABLE `bill_detail`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`);
+
+--
+-- Các ràng buộc cho bảng `product_image`
+--
+ALTER TABLE `product_image`
+  ADD CONSTRAINT `product_image_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Các ràng buộc cho bảng `variation`
