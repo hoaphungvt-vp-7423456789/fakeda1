@@ -45,10 +45,10 @@
                     <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                         Menu
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">Brands</a>
-                    <a href="#" class="list-group-item list-group-item-action">Products</a>
-                    <a href="#" class="list-group-item list-group-item-action">Color</a>
-                    <a href="#" class="list-group-item list-group-item-action">Size</a>
+                    <a href="<?= BASE_URL . '/brands-index' ?>" class="list-group-item list-group-item-action">Brands</a>
+                    <a href="<?= BASE_URL . '/products-index' ?>" class="list-group-item list-group-item-action">Products</a>
+                    <a href="<?= BASE_URL . '/color-index' ?>" class="list-group-item list-group-item-action">Color</a>
+                    <a href="<?= BASE_URL . '/size-index' ?>" class="list-group-item list-group-item-action">Size</a>
                 </div>
             </div>
             <div class="col-8 border ">
