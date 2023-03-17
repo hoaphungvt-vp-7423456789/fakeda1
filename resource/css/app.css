@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.short-2 {
+    /* overflow: hidden: Ẩn đoạn text bị thừa */
+    overflow: hidden;
+    /* text-overflow: ellipsis: Cắt một đoạn text và thay thế bằng dấu ... */
+    text-overflow: ellipsis;
+    /* white-space: nowrap: Ngăn k cho đoạn văn bản xuống dòng */
+    display: -webkit-box;
+    /* chiều đoạn văn là dọc */
+    -webkit-box-orient: vertical;
+    /* số dòng hiển thị */
+    -webkit-line-clamp: 2;
+    line-height: 25px;
+}
+.short-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* số dòng hiển thị */
+    -webkit-line-clamp: 3;
+    line-height: 25px;
+}

@@ -29,7 +29,9 @@
         <?php $__currentLoopData = $listVariation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
             <th scope="row"><?php echo e(++$key); ?></th>
-            <td scope="row"><?php echo e($item->products->name); ?></td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3"><?php echo e($item->products->name); ?></p>
+            </td>
             <td scope="row"><?php echo e($item->color->name); ?></td>
             <td scope="row"><?php echo e($item->size->name); ?></td>
             <td scope="row"><?php echo e($item->quantity); ?></td>

@@ -9,9 +9,10 @@
         @yield('title')
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="//cdn.ckeditor.com/4.20.2/full/ckeditor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="//cdn.ckeditor.com/4.20.2/full/ckeditor.js"></script>
+    <link rel="stylesheet" href="./resource/css/app.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <section class="d-flex justify-content-between align-items-center border-bottom">
             <!-- logo -->
             <div class="py-2">
-                <h1 class="text-warning">F-Watch</h1>
+                <h1 class="text-black">F-Watch</h1>
             </div>
         </section>
         <!-- body -->

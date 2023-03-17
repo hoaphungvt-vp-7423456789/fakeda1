@@ -28,10 +28,16 @@
         <?php $__currentLoopData = $listProduct; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
             <th scope="row"><?php echo e(++$key); ?></th>
-            <td scope="row"><?php echo e($item->name); ?></td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3"><?php echo e($item->name); ?></p>
+            </td>
             <td scope="row"><img src="<?php echo e('./public/uploads/products/' . $item->image); ?>" alt="" style="width: 100px; height: 100px;"></td>
-            <td scope="row"><?php echo e($item->description); ?></td>
-            <td scope="row"><?php echo e($item->detail); ?></td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3"><?php echo e($item->description); ?></p>
+            </td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3"><?php echo e($item->detail); ?></p>
+            </td>
             <td scope="row"><?php echo e($item->brands->name); ?></td>
             <td scope="row" class="text-end">
                 <form action="<?php echo e(BASE_URL . '/products-edit'); ?>">

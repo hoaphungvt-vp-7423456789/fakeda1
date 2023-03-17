@@ -29,7 +29,9 @@
         @foreach($listVariation as $key => $item)
         <tr>
             <th scope="row">{{ ++$key }}</th>
-            <td scope="row">{{ $item->products->name }}</td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3">{{ $item->products->name }}</p>
+            </td>
             <td scope="row">{{ $item->color->name }}</td>
             <td scope="row">{{ $item->size->name }}</td>
             <td scope="row">{{ $item->quantity }}</td>

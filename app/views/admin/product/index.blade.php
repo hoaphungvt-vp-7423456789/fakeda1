@@ -28,10 +28,16 @@
         @foreach($listProduct as $key => $item)
         <tr>
             <th scope="row">{{ ++$key }}</th>
-            <td scope="row">{{ $item->name }}</td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3">{{ $item->name }}</p>
+            </td>
             <td scope="row"><img src="{{ './public/uploads/products/' . $item->image }}" alt="" style="width: 100px; height: 100px;"></td>
-            <td scope="row">{{ $item->description }}</td>
-            <td scope="row">{{ $item->detail }}</td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3">{{ $item->description }}</p>
+            </td>
+            <td scope="row" style="max-width: 150px;">
+                <p class="short-3">{{ $item->detail }}</p>
+            </td>
             <td scope="row">{{ $item->brands->name }}</td>
             <td scope="row" class="text-end">
                 <form action="{{ BASE_URL . '/products-edit' }}">
