@@ -28,6 +28,7 @@
                 <a href="<?= BASE_URL . '/products-index' ?>" class="list-group-item list-group-item-action">Quản Lý Sản Phẩm</a>
                 <a href="<?= BASE_URL . '/size-index' ?>" class="list-group-item list-group-item-action">Quản Lý Size</a>
                 <a href="<?= BASE_URL . '/color-index' ?>" class="list-group-item list-group-item-action">Quản Lý Màu Sắc</a>
+                <a href="<?= BASE_URL . '/variation-index' ?>" class="list-group-item list-group-item-action">Quản lý biến thể</a>
             </div>
             <div class="col-10">
                 <div class="text-center d-flex flex-row-reverse">
